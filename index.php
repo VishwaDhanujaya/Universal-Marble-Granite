@@ -173,8 +173,7 @@ $featuredProducts = [
 </section>
 
 <!-- Projects Section (Textured Dark backdrop with slate-dark cards) -->
-<section class="py-16 md:py-24 lg:py-32 bg-brand-dark relative overflow-hidden">
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-neutral-800 via-brand-dark to-black opacity-95 z-0"></div>
+<section class="py-16 md:py-24 lg:py-32 bg-repeat relative overflow-hidden" style="background-image: url('<?= $base_path ?>/assets/images/project-bg.webp'); background-size: 512px;">
     
     <div class="container-custom relative z-10">
         
