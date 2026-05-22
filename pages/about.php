@@ -29,7 +29,7 @@ include '../includes/header.php';
 </section>
 
 <!-- Section 1: Who We Are (Image Right, Text Left) -->
-<section id="who-we-are" class="py-24 lg:py-32 bg-white overflow-hidden scroll-mt-20">
+<section id="who-we-are" class="py-16 md:py-24 lg:py-32 bg-white overflow-hidden scroll-mt-20">
     <div class="container-custom">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
@@ -65,7 +65,7 @@ include '../includes/header.php';
                 <div class="absolute -bottom-3 -right-3 w-full h-full border border-brand-accent/30 rounded-sm z-0 group-hover:translate-x-1 group-hover:translate-y-1 transition-transform duration-500"></div>
                 
                 <div class="relative overflow-hidden border border-gray-100 shadow-2xl rounded-sm z-10 bg-white aspect-[3/2]">
-                    <img src="/universalgranite/assets/images/store.webp" alt="Who We Are - Universal Granite" class="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-700">
+                    <img src="<?= $base_path ?>/assets/images/store.webp" alt="Who We Are - Universal Granite" class="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-700">
                 </div>
             </div>
 
@@ -74,7 +74,7 @@ include '../includes/header.php';
 </section>
 
 <!-- Section 2: Our Vision (Image Left, Text Right) -->
-<section class="py-24 lg:py-32 bg-[#fafaf9] overflow-hidden">
+<section class="py-16 md:py-24 lg:py-32 bg-[#fafaf9] overflow-hidden">
     <div class="container-custom">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
@@ -86,7 +86,7 @@ include '../includes/header.php';
                 <div class="absolute -bottom-3 -left-3 lg:-right-3 lg:left-auto w-full h-full border border-brand-accent/30 rounded-sm z-0 group-hover:-translate-x-1 lg:group-hover:translate-x-1 group-hover:translate-y-1 transition-transform duration-500"></div>
                 
                 <div class="relative overflow-hidden border border-gray-100 shadow-2xl rounded-sm z-10 bg-white aspect-[3/2]">
-                    <img src="/universalgranite/assets/images/our-vision.webp" alt="Our Vision - Universal Granite" class="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-700">
+                    <img src="<?= $base_path ?>/assets/images/our-vision.webp" alt="Our Vision - Universal Granite" class="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-700">
                 </div>
             </div>
 
@@ -113,7 +113,7 @@ include '../includes/header.php';
 </section>
 
 <!-- Section 3: Our Mission (Image Right, Text Left) -->
-<section class="py-24 lg:py-32 bg-white overflow-hidden">
+<section class="py-16 md:py-24 lg:py-32 bg-white overflow-hidden">
     <div class="container-custom">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
@@ -143,7 +143,7 @@ include '../includes/header.php';
                 <div class="absolute -bottom-3 -right-3 w-full h-full border border-brand-accent/30 rounded-sm z-0 group-hover:translate-x-1 group-hover:translate-y-1 transition-transform duration-500"></div>
                 
                 <div class="relative overflow-hidden border border-gray-100 shadow-2xl rounded-sm z-10 bg-white aspect-[3/2]">
-                    <img src="/universalgranite/assets/images/our%20mission.webp" alt="Our Mission - Universal Granite" class="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-700">
+                    <img src="<?= $base_path ?>/assets/images/our%20mission.webp" alt="Our Mission - Universal Granite" class="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-700">
                 </div>
             </div>
 
@@ -152,7 +152,7 @@ include '../includes/header.php';
 </section>
 
 <!-- Values Section (Textured Dark Background, Left Image, Right Accordions) -->
-<section class="py-24 lg:py-32 bg-brand-dark text-white relative overflow-hidden">
+<section class="py-16 md:py-24 lg:py-32 bg-brand-dark text-white relative overflow-hidden">
     <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-neutral-800 via-brand-dark to-black opacity-95 z-0"></div>
     
     <div class="container-custom relative z-10">
@@ -170,7 +170,7 @@ include '../includes/header.php';
                 <div class="relative w-72 h-72 sm:w-96 sm:h-96 rounded-full overflow-hidden border border-brand-accent-light/40 shadow-2xl p-3 bg-neutral-900/60 backdrop-blur-md group">
                     <!-- Subtle spinning border overlay -->
                     <div class="absolute inset-0 border border-dashed border-brand-accent-light/20 rounded-full scale-95 group-hover:rotate-45 transition-transform duration-1000"></div>
-                    <img src="/universalgranite/assets/images/values.webp" alt="Our Values - Universal Granite" class="w-full h-full object-cover rounded-full hover:scale-[1.03] transition-transform duration-700">
+                    <img src="<?= $base_path ?>/assets/images/values.webp" alt="Our Values - Universal Granite" class="w-full h-full object-cover rounded-full hover:scale-[1.03] transition-transform duration-700">
                 </div>
             </div>
 
@@ -347,7 +347,7 @@ include '../includes/header.php';
 </section>
 
 <!-- Our Strengths Section (Clean responsive cards layout with sliding top gold bars & Right vertical asset) -->
-<section class="py-24 lg:py-32 bg-[#fafaf9] overflow-hidden">
+<section class="py-16 md:py-24 lg:py-32 bg-[#fafaf9] overflow-hidden">
     <div class="container-custom">
         
         <div class="text-center max-w-3xl mx-auto mb-20 space-y-4">
@@ -474,7 +474,7 @@ include '../includes/header.php';
                 <div class="absolute -bottom-3 -left-3 w-full h-full border border-brand-accent/30 rounded-sm z-0 group-hover:-translate-x-1 group-hover:translate-y-1 transition-transform duration-500"></div>
                 
                 <div class="relative overflow-hidden border border-gray-200/60 shadow-2xl rounded-sm z-10 bg-white aspect-[4/5]">
-                    <img src="/universalgranite/assets/images/our-strengths.webp" alt="Our Strengths - Universal Granite" class="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-700">
+                    <img src="<?= $base_path ?>/assets/images/our-strengths.webp" alt="Our Strengths - Universal Granite" class="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-700">
                 </div>
             </div>
 
@@ -484,7 +484,7 @@ include '../includes/header.php';
 </section>
 
 <!-- Call to Action Section -->
-<section class="py-24 bg-brand-dark text-center relative overflow-hidden px-4">
+<section class="py-16 md:py-24 bg-brand-dark text-center relative overflow-hidden px-4">
     <!-- Sophisticated diagonal accent glow -->
     <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-brand-dark via-neutral-900 to-black opacity-90 z-0"></div>
     
@@ -497,7 +497,7 @@ include '../includes/header.php';
             Visit our showrooms across Nawala, Nugegoda, Wattala, and Jaffna to witness the unmatched brilliance of our raw slabs and tile options.
         </p>
         <div class="pt-4">
-            <a href="/universalgranite/pages/contact.php" class="btn-primary">
+            <a href="<?= $base_path ?>/pages/contact" class="btn-primary">
                 Contact Our Experts
             </a>
         </div>

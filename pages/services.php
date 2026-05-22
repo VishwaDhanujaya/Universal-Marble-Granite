@@ -17,7 +17,7 @@ include '../includes/header.php';
 </section>
 
 <!-- Services Details List -->
-<section class="py-24 lg:py-32 bg-white overflow-hidden">
+<section class="py-16 md:py-24 lg:py-32 bg-white overflow-hidden">
     <div class="container-custom">
         
         <?php
@@ -69,6 +69,12 @@ include '../includes/header.php';
             ]
         ];
 
+        // Prepend dynamic base path to all service images
+        foreach ($services as &$service) {
+            $service['image'] = $base_path . str_replace('/universalgranite', '', $service['image']);
+        }
+        unset($service);
+
         foreach ($services as $index => $service) {
             $serviceCount = $service['count'];
             $serviceTitle = $service['title'];
@@ -84,7 +90,7 @@ include '../includes/header.php';
 </section>
 
 <!-- Luxury Contact CTA Section -->
-<section class="py-24 bg-brand-dark text-center relative overflow-hidden px-4">
+<section class="py-16 md:py-24 bg-brand-dark text-center relative overflow-hidden px-4">
     <!-- Sophisticated golden accent overlay matching the About Us CTA layout -->
     <div class="absolute inset-0 bg-gradient-to-tr from-brand-dark via-neutral-900 to-black opacity-90 z-0"></div>
     
@@ -97,7 +103,7 @@ include '../includes/header.php';
             Get in touch with our natural stone experts today to discuss your architectural requirements and receive tailored stone solutions.
         </p>
         <div class="pt-4">
-            <a href="/universalgranite/pages/contact.php" class="btn-primary">
+            <a href="<?= $base_path ?>/pages/contact" class="btn-primary">
                 Contact Our Experts
             </a>
         </div>

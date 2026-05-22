@@ -1,6 +1,6 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteBase /universalgranite/
+
 
     # Redirect .php extension to extensionless URL
     RewriteCond %{THE_REQUEST} \s/+(.*?)\.php[\s?]

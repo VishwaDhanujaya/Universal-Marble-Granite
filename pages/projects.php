@@ -89,6 +89,12 @@ $projects = [
     ],
 ];
 
+// Prepend dynamic base path to all project images
+foreach ($projects as &$project) {
+    $project['image'] = $base_path . str_replace('/universalgranite', '', $project['image']);
+}
+unset($project);
+
 // Calculate category counts
 $countAll = count($projects);
 $countGranite = count(array_filter($projects, function($p) {
@@ -118,28 +124,34 @@ $countUncategorized = count(array_filter($projects, function($p) {
 <!-- Projects Grid Section with Alpine.js Filtering -->
 <section class="py-16 bg-brand-light" x-data="{ activeFilter: 'All' }">
     <div class="container-custom">
-        <!-- Category Filter Tabs -->
-        <div class="flex flex-wrap justify-center items-center gap-4 mb-12">
-            <button @click="activeFilter = 'All'" 
-                    :class="activeFilter === 'All' ? 'bg-brand-accent text-white border-brand-accent shadow-md ring-2 ring-brand-accent-light/20' : 'bg-white text-brand-dark border-gray-200 hover:border-brand-accent hover:text-brand-accent'"
-                    class="px-8 py-3 border rounded-full font-semibold uppercase tracking-wider text-xs transition-all duration-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-accent-light/40">
-                View all (<?= $countAll ?>)
-            </button>
-            <button @click="activeFilter = 'Granite Tiles'" 
-                    :class="activeFilter === 'Granite Tiles' ? 'bg-brand-accent text-white border-brand-accent shadow-md ring-2 ring-brand-accent-light/20' : 'bg-white text-brand-dark border-gray-200 hover:border-brand-accent hover:text-brand-accent'"
-                    class="px-8 py-3 border rounded-full font-semibold uppercase tracking-wider text-xs transition-all duration-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-accent-light/40">
-                Granite Tiles (<?= $countGranite ?>)
-            </button>
-            <button @click="activeFilter = 'Marble Tiles'" 
-                    :class="activeFilter === 'Marble Tiles' ? 'bg-brand-accent text-white border-brand-accent shadow-md ring-2 ring-brand-accent-light/20' : 'bg-white text-brand-dark border-gray-200 hover:border-brand-accent hover:text-brand-accent'"
-                    class="px-8 py-3 border rounded-full font-semibold uppercase tracking-wider text-xs transition-all duration-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-accent-light/40">
-                Marble Tiles (<?= $countMarble ?>)
-            </button>
-            <button @click="activeFilter = 'Uncategorized'" 
-                    :class="activeFilter === 'Uncategorized' ? 'bg-brand-accent text-white border-brand-accent shadow-md ring-2 ring-brand-accent-light/20' : 'bg-white text-brand-dark border-gray-200 hover:border-brand-accent hover:text-brand-accent'"
-                    class="px-8 py-3 border rounded-full font-semibold uppercase tracking-wider text-xs transition-all duration-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-accent-light/40">
-                Uncategorized (<?= $countUncategorized ?>)
-            </button>
+        <!-- Category Filter Tabs Wrapper (Sticky on Scroll) -->
+        <div class="sticky top-[72px] z-30 bg-brand-light/95 backdrop-blur-md py-4 mb-12 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 border-b border-gray-200/30 transition-all duration-300 relative w-full">
+            <!-- Fade masks for mobile horizontal scroll scrollbar-less indicator -->
+            <div class="absolute left-0 top-4 bottom-4 w-12 bg-gradient-to-r from-brand-light to-transparent z-10 pointer-events-none md:hidden"></div>
+            <div class="absolute right-0 top-4 bottom-4 w-12 bg-gradient-to-l from-brand-light to-transparent z-10 pointer-events-none md:hidden"></div>
+            
+            <div class="flex overflow-x-auto no-scrollbar justify-start md:justify-center items-center gap-4 pb-2 md:pb-0 px-4 md:px-0 snap-x snap-mandatory scroll-smooth scroll-px-4">
+                <button @click="activeFilter = 'All'; $el.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })" 
+                        :class="activeFilter === 'All' ? 'bg-brand-accent text-white border-brand-accent shadow-md ring-2 ring-brand-accent-light/20' : 'bg-white text-brand-dark border-gray-200 hover:border-brand-accent hover:text-brand-accent'"
+                        class="shrink-0 snap-start px-8 py-3 border rounded-full font-semibold uppercase tracking-wider text-xs transition-all duration-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-accent-light/40">
+                    View all (<?= $countAll ?>)
+                </button>
+                <button @click="activeFilter = 'Granite Tiles'; $el.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })" 
+                        :class="activeFilter === 'Granite Tiles' ? 'bg-brand-accent text-white border-brand-accent shadow-md ring-2 ring-brand-accent-light/20' : 'bg-white text-brand-dark border-gray-200 hover:border-brand-accent hover:text-brand-accent'"
+                        class="shrink-0 snap-start px-8 py-3 border rounded-full font-semibold uppercase tracking-wider text-xs transition-all duration-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-accent-light/40">
+                    Granite Tiles (<?= $countGranite ?>)
+                </button>
+                <button @click="activeFilter = 'Marble Tiles'; $el.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })" 
+                        :class="activeFilter === 'Marble Tiles' ? 'bg-brand-accent text-white border-brand-accent shadow-md ring-2 ring-brand-accent-light/20' : 'bg-white text-brand-dark border-gray-200 hover:border-brand-accent hover:text-brand-accent'"
+                        class="shrink-0 snap-start px-8 py-3 border rounded-full font-semibold uppercase tracking-wider text-xs transition-all duration-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-accent-light/40">
+                    Marble Tiles (<?= $countMarble ?>)
+                </button>
+                <button @click="activeFilter = 'Uncategorized'; $el.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })" 
+                        :class="activeFilter === 'Uncategorized' ? 'bg-brand-accent text-white border-brand-accent shadow-md ring-2 ring-brand-accent-light/20' : 'bg-white text-brand-dark border-gray-200 hover:border-brand-accent hover:text-brand-accent'"
+                        class="shrink-0 snap-start px-8 py-3 border rounded-full font-semibold uppercase tracking-wider text-xs transition-all duration-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-accent-light/40">
+                    Uncategorized (<?= $countUncategorized ?>)
+                </button>
+            </div>
         </div>
 
         <!-- Projects Grid -->
@@ -157,7 +169,10 @@ $countUncategorized = count(array_filter($projects, function($p) {
                 <div x-show="activeFilter === 'All' || <?= $tagsJson ?>.includes(activeFilter)"
                      x-transition:enter="transition ease-out duration-300"
                      x-transition:enter-start="opacity-0 scale-95"
-                     x-transition:enter-end="opacity-100 scale-100">
+                     x-transition:enter-end="opacity-100 scale-100"
+                     x-transition:leave="transition ease-in duration-200"
+                     x-transition:leave-start="opacity-100 scale-100"
+                     x-transition:leave-end="opacity-0 scale-95">
                     <?php 
                     include '../components/project-card.php'; 
                     $delay += 100;

@@ -2,7 +2,10 @@
 // Product Card Component
 // Expects: $image, $name, $category, $description
 ?>
-<div class="group relative overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-500 rounded-sm flex flex-col border border-neutral-100 hover:border-brand-accent/35 h-full">
+<div class="group relative overflow-hidden bg-white shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 rounded-lg border border-gray-200/60 flex flex-col h-full">
+    <!-- Sliding accent top border -->
+    <div class="absolute top-0 left-0 w-full h-[4px] bg-brand-accent transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 z-20"></div>
+    
     <div class="overflow-hidden aspect-square w-full bg-neutral-50 relative">
         <img src="<?= htmlspecialchars($image) ?>" alt="<?= htmlspecialchars($name) ?>" loading="lazy" class="w-full h-full object-cover transform group-hover:scale-[1.03] transition-transform duration-700">
         <div class="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/5 transition-colors duration-700 z-10 mix-blend-overlay"></div>

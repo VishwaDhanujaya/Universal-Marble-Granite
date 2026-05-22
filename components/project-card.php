@@ -5,7 +5,7 @@
 $year = isset($year) ? $year : null;
 $tags = isset($tags) ? $tags : [];
 ?>
-<div class="group relative overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all duration-500 rounded-lg border border-gray-200/60 flex flex-col h-full">
+<div class="group relative overflow-hidden bg-white shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 rounded-lg border border-gray-200/60 flex flex-col h-full">
     <!-- Sliding accent top border -->
     <div class="absolute top-0 left-0 w-full h-[4px] bg-brand-accent transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 z-20"></div>
     

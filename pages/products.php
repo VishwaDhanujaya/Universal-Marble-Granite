@@ -51,6 +51,12 @@ $products = [
     ['name' => 'Paradiso', 'category' => 'Granite', 'description' => '', 'image' => '/universalgranite/assets/images/products/granite/paradiso.jpg'],
 ];
 
+// Prepend dynamic base path to all product images
+foreach ($products as &$product) {
+    $product['image'] = $base_path . str_replace('/universalgranite', '', $product['image']);
+}
+unset($product);
+
 // Separate products in PHP to count them on the filter tabs
 $graniteProducts = array_filter($products, function($p) {
     return $p['category'] === 'Granite';
@@ -97,23 +103,29 @@ $marbleProducts = array_filter($products, function($p) {
     }
 }">
     <div class="container-custom">
-        <!-- Static, Non-floating Inline Filter Tabs -->
-        <div class="flex flex-wrap justify-center items-center gap-4 mb-12">
-            <button @click="setFilter('All')" 
-                    :class="filter === 'All' ? 'bg-brand-accent text-white border-brand-accent shadow-md ring-2 ring-brand-accent-light/20' : 'bg-white text-brand-dark border-gray-200 hover:border-brand-accent hover:text-brand-accent'"
-                    class="px-8 py-3 border rounded-full font-semibold uppercase tracking-wider text-xs transition-all duration-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-accent-light/40">
-                All (<?= count($products) ?>)
-            </button>
-            <button @click="setFilter('Granite')" 
-                    :class="filter === 'Granite' ? 'bg-brand-accent text-white border-brand-accent shadow-md ring-2 ring-brand-accent-light/20' : 'bg-white text-brand-dark border-gray-200 hover:border-brand-accent hover:text-brand-accent'"
-                    class="px-8 py-3 border rounded-full font-semibold uppercase tracking-wider text-xs transition-all duration-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-accent-light/40">
-                Granite (<?= count($graniteProducts) ?>)
-            </button>
-            <button @click="setFilter('Marble')" 
-                    :class="filter === 'Marble' ? 'bg-brand-accent text-white border-brand-accent shadow-md ring-2 ring-brand-accent-light/20' : 'bg-white text-brand-dark border-gray-200 hover:border-brand-accent hover:text-brand-accent'"
-                    class="px-8 py-3 border rounded-full font-semibold uppercase tracking-wider text-xs transition-all duration-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-accent-light/40">
-                Marble (<?= count($marbleProducts) ?>)
-            </button>
+        <!-- Category Filter Tabs Wrapper (Sticky on Scroll) -->
+        <div class="sticky top-[72px] z-30 bg-brand-light/95 backdrop-blur-md py-4 mb-12 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 border-b border-gray-200/30 transition-all duration-300 relative w-full">
+            <!-- Fade masks for mobile horizontal scroll scrollbar-less indicator -->
+            <div class="absolute left-0 top-4 bottom-4 w-12 bg-gradient-to-r from-brand-light to-transparent z-10 pointer-events-none md:hidden"></div>
+            <div class="absolute right-0 top-4 bottom-4 w-12 bg-gradient-to-l from-brand-light to-transparent z-10 pointer-events-none md:hidden"></div>
+            
+            <div class="flex overflow-x-auto no-scrollbar justify-start md:justify-center items-center gap-4 pb-2 md:pb-0 px-4 md:px-0 snap-x snap-mandatory scroll-smooth scroll-px-4">
+                <button @click="setFilter('All'); $el.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })" 
+                        :class="filter === 'All' ? 'bg-brand-accent text-white border-brand-accent shadow-md ring-2 ring-brand-accent-light/20' : 'bg-white text-brand-dark border-gray-200 hover:border-brand-accent hover:text-brand-accent'"
+                        class="shrink-0 snap-start px-8 py-3 border rounded-full font-semibold uppercase tracking-wider text-xs transition-all duration-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-accent-light/40">
+                    All (<?= count($products) ?>)
+                </button>
+                <button @click="setFilter('Granite'); $el.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })" 
+                        :class="filter === 'Granite' ? 'bg-brand-accent text-white border-brand-accent shadow-md ring-2 ring-brand-accent-light/20' : 'bg-white text-brand-dark border-gray-200 hover:border-brand-accent hover:text-brand-accent'"
+                        class="shrink-0 snap-start px-8 py-3 border rounded-full font-semibold uppercase tracking-wider text-xs transition-all duration-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-accent-light/40">
+                    Granite (<?= count($graniteProducts) ?>)
+                </button>
+                <button @click="setFilter('Marble'); $el.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })" 
+                        :class="filter === 'Marble' ? 'bg-brand-accent text-white border-brand-accent shadow-md ring-2 ring-brand-accent-light/20' : 'bg-white text-brand-dark border-gray-200 hover:border-brand-accent hover:text-brand-accent'"
+                        class="shrink-0 snap-start px-8 py-3 border rounded-full font-semibold uppercase tracking-wider text-xs transition-all duration-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-accent-light/40">
+                    Marble (<?= count($marbleProducts) ?>)
+                </button>
+            </div>
         </div>
 
         <!-- 4-Column Grid -->
@@ -122,8 +134,14 @@ $marbleProducts = array_filter($products, function($p) {
                 <div class="w-full"
                      x-transition:enter="transition ease-out duration-300"
                      x-transition:enter-start="opacity-0 scale-95"
-                     x-transition:enter-end="opacity-100 scale-100">
-                    <div class="group relative overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-500 rounded-sm flex flex-col border border-neutral-100 hover:border-brand-accent/35 h-full">
+                     x-transition:enter-end="opacity-100 scale-100"
+                     x-transition:leave="transition ease-in duration-200"
+                     x-transition:leave-start="opacity-100 scale-100"
+                     x-transition:leave-end="opacity-0 scale-95">
+                    <div class="group relative overflow-hidden bg-white shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 rounded-lg border border-gray-200/60 flex flex-col h-full">
+                        <!-- Sliding accent top border -->
+                        <div class="absolute top-0 left-0 w-full h-[4px] bg-brand-accent transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 z-20"></div>
+                        
                         <div class="overflow-hidden aspect-square w-full bg-neutral-50 relative">
                             <img :src="prod.image" :alt="prod.name" loading="lazy" class="w-full h-full object-cover transform group-hover:scale-[1.03] transition-transform duration-700">
                             <div class="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/5 transition-colors duration-700 z-10 mix-blend-overlay"></div>

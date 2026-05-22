@@ -14,7 +14,7 @@ include 'includes/header.php';
 <!-- Hero Section -->
 <section class="relative h-screen flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 z-0">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop" alt="Luxury Interior" class="w-full h-full object-cover">
+        <img src="<?= $base_path ?>/assets/images/store.webp" alt="Luxury Interior" class="w-full h-full object-cover">
         <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-black/50 via-black/80 to-black opacity-95"></div>
     </div>
     
@@ -22,21 +22,21 @@ include 'includes/header.php';
         <span class="inline-block px-4 py-1.5 bg-white/10 backdrop-blur-md text-brand-accent-light font-display font-semibold tracking-[0.25em] uppercase text-xs sm:text-sm rounded-full mb-2 border border-brand-accent-light/20 animate-fade-in">
             Sri Lanka's No. 1 Natural Stone Supplier
         </span>
-        <h1 class="text-5xl md:text-7xl font-display font-bold text-white mb-6 uppercase tracking-wider leading-none">
+        <h1 class="text-3xl sm:text-5xl md:text-7xl font-display font-bold text-white mb-6 uppercase tracking-wider leading-none">
             Elegance in Every <span class="text-brand-accent-light">Stone</span>
         </h1>
         <p class="text-base md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed tracking-wide">
             Premium natural stones, marble, and granite sourced from the finest quarries worldwide for Sri Lanka's most luxurious architectural masterpieces.
         </p>
         <div class="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-            <a href="/universalgranite/pages/products" class="btn-primary">Explore Collection</a>
-            <a href="/universalgranite/pages/contact" class="btn-outline border-white text-white hover:bg-white hover:text-brand-dark">Contact Us</a>
+            <a href="<?= $base_path ?>/pages/products" class="btn-primary">Explore Collection</a>
+            <a href="<?= $base_path ?>/pages/contact" class="btn-outline border-white text-white hover:bg-white hover:text-brand-dark">Contact Us</a>
         </div>
     </div>
 </section>
 
 <!-- About Us Section -->
-<section class="py-24 lg:py-32 bg-white overflow-hidden">
+<section class="py-16 md:py-24 lg:py-32 bg-white overflow-hidden">
     <div class="container-custom">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
@@ -60,7 +60,7 @@ include 'includes/header.php';
                     </p>
                 </div>
                 <div class="pt-4">
-                    <a href="/universalgranite/pages/about" class="btn-outline border-brand-dark text-brand-dark hover:bg-brand-dark hover:text-white">Discover Our Story</a>
+                    <a href="<?= $base_path ?>/pages/about" class="btn-outline border-brand-dark text-brand-dark hover:bg-brand-dark hover:text-white">Discover Our Story</a>
                 </div>
             </div>
 
@@ -72,7 +72,7 @@ include 'includes/header.php';
                 <div class="absolute -bottom-3 -right-3 w-full h-full border border-brand-accent/30 rounded-sm z-0 group-hover:translate-x-1 group-hover:translate-y-1 transition-transform duration-500"></div>
                 
                 <div class="relative overflow-hidden aspect-[3/2] w-full border border-gray-100 shadow-2xl rounded-sm z-10 bg-white">
-                    <img src="/universalgranite/assets/images/store.webp" alt="Universal Granite Store" loading="lazy" class="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-700">
+                    <img src="<?= $base_path ?>/assets/images/store.webp" alt="Universal Granite Store" loading="lazy" class="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-700">
                 </div>
             </div>
 
@@ -81,7 +81,7 @@ include 'includes/header.php';
 </section>
 
 <!-- Our Products Section -->
-<section class="py-24 lg:py-32 bg-[#fafaf9] overflow-hidden">
+<section class="py-16 md:py-24 lg:py-32 bg-[#fafaf9] overflow-hidden">
     <div class="container-custom">
         <div class="text-center max-w-3xl mx-auto mb-20 space-y-4">
             <span class="text-brand-accent font-display font-semibold tracking-widest uppercase text-xs sm:text-sm">What We Offer</span>
@@ -92,17 +92,17 @@ include 'includes/header.php';
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <!-- Granite Slabs -->
-            <div class="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer border border-gray-100 bg-white">
+            <div class="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer border border-gray-100 bg-white hover:-translate-y-1 transition-all duration-500">
                 <!-- Sliding accent top border -->
                 <div class="absolute top-0 left-0 w-full h-[4px] bg-brand-accent transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 z-20"></div>
                 <div class="overflow-hidden aspect-[16/10] w-full relative">
-                    <img src="assets/images/granite-slab-home.webp" alt="Granite Slabs" loading="lazy" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700">
+                    <img src="<?= $base_path ?>/assets/images/granite-slab-home.webp" alt="Granite Slabs" loading="lazy" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700">
                 </div>
                 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-8 z-10">
                     <span class="text-brand-accent-light text-xs font-bold uppercase tracking-[0.2em] mb-2">Natural Stone</span>
                     <h3 class="text-3xl font-display font-bold text-white mb-3">Granite Slabs</h3>
                     <p class="text-gray-300 text-sm leading-relaxed mb-6 max-w-sm">Durable, heat-resistant, and beautiful — our granite collection spans from deep blacks to warm earth tones, sourced from the finest quarries.</p>
-                    <a href="/universalgranite/pages/products" class="inline-flex items-center gap-2 text-white border border-white/40 hover:border-brand-accent-light hover:text-brand-accent-light px-6 py-2.5 text-sm font-medium uppercase tracking-wider transition-all duration-300 w-fit">
+                    <a href="<?= $base_path ?>/pages/products" class="inline-flex items-center gap-2 text-white border border-white/40 hover:border-brand-accent-light hover:text-brand-accent-light px-6 py-2.5 text-sm font-medium uppercase tracking-wider transition-all duration-300 w-fit">
                         View Collection
                         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                     </a>
@@ -110,17 +110,17 @@ include 'includes/header.php';
             </div>
 
             <!-- Marble Tiles -->
-            <div class="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer border border-gray-100 bg-white">
+            <div class="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer border border-gray-100 bg-white hover:-translate-y-1 transition-all duration-500">
                 <!-- Sliding accent top border -->
                 <div class="absolute top-0 left-0 w-full h-[4px] bg-brand-accent transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 z-20"></div>
                 <div class="overflow-hidden aspect-[16/10] w-full relative">
-                    <img src="assets/images/marble-tiles-home.webp" alt="Marble Tiles" loading="lazy" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700">
+                    <img src="<?= $base_path ?>/assets/images/marble-tiles-home.webp" alt="Marble Tiles" loading="lazy" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700">
                 </div>
                 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-8 z-10">
                     <span class="text-brand-accent-light text-xs font-bold uppercase tracking-[0.2em] mb-2">Luxury Stone</span>
                     <h3 class="text-3xl font-display font-bold text-white mb-3">Marble Tiles</h3>
                     <p class="text-gray-300 text-sm leading-relaxed mb-6 max-w-sm">Timeless elegance with every vein. Our marble collection brings classical luxury to floors, walls, and countertops of the highest caliber.</p>
-                    <a href="/universalgranite/pages/products" class="inline-flex items-center gap-2 text-white border border-white/40 hover:border-brand-accent-light hover:text-brand-accent-light px-6 py-2.5 text-sm font-medium uppercase tracking-wider transition-all duration-300 w-fit">
+                    <a href="<?= $base_path ?>/pages/products" class="inline-flex items-center gap-2 text-white border border-white/40 hover:border-brand-accent-light hover:text-brand-accent-light px-6 py-2.5 text-sm font-medium uppercase tracking-wider transition-all duration-300 w-fit">
                         View Collection
                         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                     </a>
@@ -133,13 +133,13 @@ include 'includes/header.php';
 <!-- From Our Store Selection -->
 <?php
 $featuredProducts = [
-    ['name' => 'Black Pearl', 'category' => 'Granite', 'image' => '/universalgranite/assets/images/products/granite/black-pearl.jpg'],
-    ['name' => 'Makarana White', 'category' => 'Marble', 'image' => '/universalgranite/assets/images/products/marble/makarana-white.jpg'],
-    ['name' => 'Dark Emperador', 'category' => 'Marble', 'image' => '/universalgranite/assets/images/products/marble/dark-emperador.jpg'],
-    ['name' => 'Black Galaxy', 'category' => 'Granite', 'image' => '/universalgranite/assets/images/products/granite/black-galaxy.jpg']
+    ['name' => 'Black Pearl', 'category' => 'Granite', 'image' => $base_path . '/assets/images/products/granite/black-pearl.jpg'],
+    ['name' => 'Makarana White', 'category' => 'Marble', 'image' => $base_path . '/assets/images/products/marble/makarana-white.jpg'],
+    ['name' => 'Dark Emperador', 'category' => 'Marble', 'image' => $base_path . '/assets/images/products/marble/dark-emperador.jpg'],
+    ['name' => 'Black Galaxy', 'category' => 'Granite', 'image' => $base_path . '/assets/images/products/granite/black-galaxy.jpg']
 ];
 ?>
-<section class="py-24 lg:py-32 bg-white overflow-hidden">
+<section class="py-16 md:py-24 lg:py-32 bg-white overflow-hidden">
     <div class="container-custom">
         
         <div class="text-center max-w-3xl mx-auto mb-20 space-y-4">
@@ -168,13 +168,13 @@ $featuredProducts = [
         </div>
 
         <div class="text-center mt-14">
-            <a href="/universalgranite/pages/products" class="btn-primary">View Full Collection</a>
+            <a href="<?= $base_path ?>/pages/products" class="btn-primary">View Full Collection</a>
         </div>
     </div>
 </section>
 
 <!-- Projects Section (Textured Dark backdrop with slate-dark cards) -->
-<section class="py-24 lg:py-32 bg-brand-dark relative overflow-hidden">
+<section class="py-16 md:py-24 lg:py-32 bg-brand-dark relative overflow-hidden">
     <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-neutral-800 via-brand-dark to-black opacity-95 z-0"></div>
     
     <div class="container-custom relative z-10">
@@ -192,11 +192,11 @@ $featuredProducts = [
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
 
             <!-- Project 1: Arcade Independence Square -->
-            <div class="group bg-neutral-900/40 backdrop-blur-md overflow-hidden hover:shadow-2xl hover:border-brand-accent-light/50 border border-neutral-800/80 transition-all duration-500 rounded-lg relative">
+            <div class="group bg-neutral-900/40 backdrop-blur-md overflow-hidden hover:shadow-2xl hover:border-brand-accent-light/50 border border-neutral-800/80 hover:-translate-y-1 transition-all duration-500 rounded-lg relative">
                 <!-- Sliding accent top border -->
                 <div class="absolute top-0 left-0 w-full h-[4px] bg-brand-accent-light transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 z-20"></div>
                 <div class="overflow-hidden aspect-[16/10] w-full relative">
-                    <img src="/universalgranite/assets/images/projects/arcade-independence.jpg" alt="Arcade Independence Square" loading="lazy" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700">
+                    <img src="<?= $base_path ?>/assets/images/projects/arcade-independence.jpg" alt="Arcade Independence Square" loading="lazy" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700">
                 </div>
                 <div class="p-8">
                     <div class="flex items-center gap-3 mb-4">
@@ -219,11 +219,11 @@ $featuredProducts = [
             </div>
 
             <!-- Project 2: Rock House Army Camp -->
-            <div class="group bg-neutral-900/40 backdrop-blur-md overflow-hidden hover:shadow-2xl hover:border-brand-accent-light/50 border border-neutral-800/80 transition-all duration-500 rounded-lg relative">
+            <div class="group bg-neutral-900/40 backdrop-blur-md overflow-hidden hover:shadow-2xl hover:border-brand-accent-light/50 border border-neutral-800/80 hover:-translate-y-1 transition-all duration-500 rounded-lg relative">
                 <!-- Sliding accent top border -->
                 <div class="absolute top-0 left-0 w-full h-[4px] bg-brand-accent-light transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 z-20"></div>
                 <div class="overflow-hidden aspect-[16/10] w-full relative">
-                    <img src="/universalgranite/assets/images/projects/rock-house-army-camp.jpg" alt="Rock House Army Camp" loading="lazy" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700">
+                    <img src="<?= $base_path ?>/assets/images/projects/rock-house-army-camp.jpg" alt="Rock House Army Camp" loading="lazy" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700">
                 </div>
                 <div class="p-8">
                     <div class="flex items-center gap-3 mb-4">
@@ -248,13 +248,13 @@ $featuredProducts = [
         </div>
 
         <div class="text-center mt-14">
-            <a href="/universalgranite/pages/projects" class="btn-outline border-white text-white hover:bg-white hover:text-brand-dark">View More Projects</a>
+            <a href="<?= $base_path ?>/pages/projects" class="btn-outline border-white text-white hover:bg-white hover:text-brand-dark">View More Projects</a>
         </div>
     </div>
 </section>
 
 <!-- Luxury Contact CTA Section -->
-<section class="py-24 bg-brand-dark text-center relative overflow-hidden px-4">
+<section class="py-16 md:py-24 bg-brand-dark text-center relative overflow-hidden px-4">
     <!-- Sophisticated golden accent overlay matching the About Us CTA layout -->
     <div class="absolute inset-0 bg-gradient-to-tr from-brand-dark via-neutral-900 to-black opacity-90 z-0"></div>
     
@@ -267,7 +267,7 @@ $featuredProducts = [
             Get in touch with our natural stone experts today to explore premium marbles and custom granite solutions and bring your architectural vision to life.
         </p>
         <div class="pt-4">
-            <a href="/universalgranite/pages/contact" class="btn-primary">
+            <a href="<?= $base_path ?>/pages/contact" class="btn-primary">
                 Contact Our Experts
             </a>
         </div>

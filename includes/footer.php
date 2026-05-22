@@ -8,8 +8,8 @@
 
                 <!-- Brand -->
                 <div>
-                    <a href="/universalgranite/" class="flex items-center space-x-3 text-2xl font-display font-bold text-white mb-4 tracking-wide group">
-                        <img src="/universalgranite/assets/images/logo.png" alt="Universal Marble & Granite Logo" class="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                    <a href="<?= $base_path ?: '/' ?>" class="flex items-center space-x-3 text-2xl font-display font-bold text-white mb-4 tracking-wide group">
+                        <img src="<?= $base_path ?>/assets/images/logo.png" alt="Universal Marble & Granite Logo" class="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
                         <span>Universal <span class="text-brand-accent-light">Marble & Granite</span></span>
                     </a>
                     <p class="text-gray-400 text-sm leading-relaxed mt-3 max-w-xs">
@@ -34,12 +34,12 @@
                 <div>
                     <h4 class="text-sm font-semibold uppercase tracking-widest text-white mb-6">Quick Links</h4>
                     <ul class="space-y-3">
-                        <li><a href="/universalgranite/pages/about" class="text-gray-400 hover:text-brand-accent-light transition-colors text-sm">About Us</a></li>
-                        <li><a href="/universalgranite/pages/products" class="text-gray-400 hover:text-brand-accent-light transition-colors text-sm">Products</a></li>
-                        <li><a href="/universalgranite/pages/projects" class="text-gray-400 hover:text-brand-accent-light transition-colors text-sm">Projects</a></li>
-                        <li><a href="/universalgranite/pages/services" class="text-gray-400 hover:text-brand-accent-light transition-colors text-sm">Services</a></li>
-                        <li><a href="/universalgranite/pages/gallery" class="text-gray-400 hover:text-brand-accent-light transition-colors text-sm">Gallery</a></li>
-                        <li><a href="/universalgranite/pages/contact" class="text-gray-400 hover:text-brand-accent-light transition-colors text-sm">Contact</a></li>
+                        <li><a href="<?= $base_path ?>/pages/about" class="text-gray-400 hover:text-brand-accent-light transition-colors text-sm">About Us</a></li>
+                        <li><a href="<?= $base_path ?>/pages/products" class="text-gray-400 hover:text-brand-accent-light transition-colors text-sm">Products</a></li>
+                        <li><a href="<?= $base_path ?>/pages/projects" class="text-gray-400 hover:text-brand-accent-light transition-colors text-sm">Projects</a></li>
+                        <li><a href="<?= $base_path ?>/pages/services" class="text-gray-400 hover:text-brand-accent-light transition-colors text-sm">Services</a></li>
+                        <li><a href="<?= $base_path ?>/pages/gallery" class="text-gray-400 hover:text-brand-accent-light transition-colors text-sm">Gallery</a></li>
+                        <li><a href="<?= $base_path ?>/pages/contact" class="text-gray-400 hover:text-brand-accent-light transition-colors text-sm">Contact</a></li>
                     </ul>
                 </div>
 
