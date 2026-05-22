@@ -80,11 +80,10 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- Our Products Section with luxury background texture -->
+<!-- Our Products Section -->
 <section class="relative py-16 md:py-24 lg:py-32 bg-cover bg-center bg-no-repeat overflow-hidden" style="background-image: url('<?= $base_path ?>/assets/images/our-products-bg.webp');">
-    <!-- Premium glassmorphism overlay to ensure text contrast and luxury feel -->
-    <div class="absolute inset-0 bg-[#fafaf9]/93 backdrop-blur-[2px] z-0"></div>
-    
+    <!-- Premium high-contrast light overlay (no blur) to ensure perfect legibility of dark text on grey background -->
+    <div class="absolute inset-0 bg-white/85 z-0"></div>
     <div class="container-custom relative z-10">
         <div class="text-center max-w-3xl mx-auto mb-20 space-y-4">
             <span class="text-brand-accent font-display font-semibold tracking-widest uppercase text-xs sm:text-sm">What We Offer</span>
