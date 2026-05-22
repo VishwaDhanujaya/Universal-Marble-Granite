@@ -90,26 +90,24 @@ include '../includes/header.php';
 </section>
 
 <!-- Luxury Contact CTA Section -->
-<section class="py-16 md:py-24 bg-brand-dark text-center relative overflow-hidden px-4">
-    <!-- Sophisticated golden accent overlay matching the About Us CTA layout -->
-    <div class="absolute inset-0 bg-gradient-to-tr from-brand-dark via-neutral-900 to-black opacity-90 z-0"></div>
+<section class="py-16 md:py-24 bg-white text-center border-t border-gray-100 relative overflow-hidden px-4">
     
     <div class="relative z-10 max-w-3xl mx-auto space-y-6 animate-fade-in text-center">
         <!-- Address -->
-        <p class="font-display text-xl sm:text-2xl font-light tracking-wide text-gray-200">
+        <p class="font-display text-xl sm:text-2xl font-normal tracking-wide text-brand-dark">
             No. 267/1, Nawala Road, Nawala, Sri Lanka.
         </p>
         
         <!-- Elegant brand separator -->
-        <div class="w-16 h-[1px] bg-brand-accent mx-auto my-6 opacity-60"></div>
+        <div class="w-16 h-[2px] bg-brand-accent mx-auto my-6 opacity-80"></div>
         
         <!-- Large luxury phone link -->
-        <p class="font-display text-3xl sm:text-4xl font-bold tracking-widest text-brand-accent-light hover:text-white transition-colors duration-300">
+        <p class="font-display text-3xl sm:text-4xl font-bold tracking-widest text-brand-accent hover:text-brand-dark transition-colors duration-300">
             <a href="tel:+94112806603">0112 806 603</a>
         </p>
         
         <!-- Opening Hours -->
-        <p class="font-sans text-xs sm:text-sm tracking-widest uppercase text-gray-400 font-medium">
+        <p class="font-sans text-xs sm:text-sm tracking-widest uppercase text-brand-gray font-semibold">
             – open Monday to Saturday from 9am to 6pm –
         </p>
     </div>
