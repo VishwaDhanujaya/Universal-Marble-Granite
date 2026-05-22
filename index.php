@@ -82,12 +82,12 @@ include 'includes/header.php';
 
 <!-- Our Products Section -->
 <section class="relative py-16 md:py-24 lg:py-32 bg-cover bg-center bg-no-repeat overflow-hidden" style="background-image: url('<?= $base_path ?>/assets/images/our-products-bg.webp');">
-    <!-- Premium high-contrast light overlay (no blur) to ensure perfect legibility of dark text on grey background -->
-    <div class="absolute inset-0 bg-white/85 z-0"></div>
     <div class="container-custom relative z-10">
-        <div class="text-center max-w-3xl mx-auto mb-20 space-y-4">
-            <span class="text-brand-accent font-display font-semibold tracking-widest uppercase text-xs sm:text-sm">What We Offer</span>
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-brand-dark uppercase tracking-wide">
+        <div class="text-center max-w-3xl mx-auto mb-20">
+            <span class="inline-block px-4 py-1.5 bg-brand-dark/95 text-brand-accent-light font-display font-semibold tracking-widest uppercase text-[10px] sm:text-xs rounded-full shadow-md mb-4 border border-brand-accent/30">
+                What We Offer
+            </span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white uppercase tracking-wide drop-shadow-[0_4px_12px_rgba(0,0,0,0.85)] mt-2">
                 Our Products
             </h2>
         </div>
