@@ -65,7 +65,7 @@ include '../includes/header.php';
                 <div class="absolute -bottom-3 -right-3 w-full h-full border border-brand-accent/30 rounded-sm z-0 group-hover:translate-x-1 group-hover:translate-y-1 transition-transform duration-500"></div>
                 
                 <div class="relative overflow-hidden border border-gray-100 shadow-2xl rounded-sm z-10 bg-white aspect-[3/2]">
-                    <img src="/universalgranite/assets/images/store.png" alt="Who We Are - Universal Granite" class="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-700">
+                    <img src="/universalgranite/assets/images/store.webp" alt="Who We Are - Universal Granite" class="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-700">
                 </div>
             </div>
 
@@ -170,7 +170,7 @@ include '../includes/header.php';
                 <div class="relative w-72 h-72 sm:w-96 sm:h-96 rounded-full overflow-hidden border border-brand-accent-light/40 shadow-2xl p-3 bg-neutral-900/60 backdrop-blur-md group">
                     <!-- Subtle spinning border overlay -->
                     <div class="absolute inset-0 border border-dashed border-brand-accent-light/20 rounded-full scale-95 group-hover:rotate-45 transition-transform duration-1000"></div>
-                    <img src="/universalgranite/assets/images/values.png" alt="Our Values - Universal Granite" class="w-full h-full object-cover rounded-full hover:scale-[1.03] transition-transform duration-700">
+                    <img src="/universalgranite/assets/images/values.webp" alt="Our Values - Universal Granite" class="w-full h-full object-cover rounded-full hover:scale-[1.03] transition-transform duration-700">
                 </div>
             </div>
 

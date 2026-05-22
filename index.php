@@ -72,7 +72,7 @@ include 'includes/header.php';
                 <div class="absolute -bottom-3 -right-3 w-full h-full border border-brand-accent/30 rounded-sm z-0 group-hover:translate-x-1 group-hover:translate-y-1 transition-transform duration-500"></div>
                 
                 <div class="relative overflow-hidden aspect-[3/2] w-full border border-gray-100 shadow-2xl rounded-sm z-10 bg-white">
-                    <img src="/universalgranite/assets/images/store.png" alt="Universal Granite Store" loading="lazy" class="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-700">
+                    <img src="/universalgranite/assets/images/store.webp" alt="Universal Granite Store" loading="lazy" class="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-700">
                 </div>
             </div>
 

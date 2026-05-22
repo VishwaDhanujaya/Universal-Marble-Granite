@@ -34,7 +34,7 @@ include '../includes/header.php';
             [
                 'count' => '02',
                 'title' => 'Walls',
-                'image' => '/universalgranite/assets/images/walls.png',
+                'image' => '/universalgranite/assets/images/walls.webp',
                 'content' => [
                     "The company specializes in elegant wall installations using granite and marble inclusive of decorative elements. The range of colours and textures available at Universal Marble & Granite gives walls a unique feature adding elegance to the premises.",
                     "Many military messes and bases, as well as hotels and resorts have incorporated natural stone based walling options from Universal Marble & Granite."
