@@ -15,7 +15,7 @@ include 'includes/header.php';
 <section class="relative h-screen flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 z-0">
         <img src="<?= $base_path ?>/assets/images/store.webp" alt="Luxury Interior" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-black/50 via-black/80 to-black opacity-95"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-black/25 via-black/55 to-black/85 opacity-75"></div>
     </div>
     
     <div class="container-custom relative z-10 text-center px-4 space-y-6">
