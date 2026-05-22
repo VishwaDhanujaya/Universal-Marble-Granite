@@ -12,26 +12,126 @@ include 'includes/header.php';
 </style>
 
 <!-- Hero Section -->
-<section class="relative h-screen flex items-center justify-center overflow-hidden">
+<!-- Hero Section -->
+<section x-data="{ activeSlide: 0, slidesCount: 3, autoplay() { setInterval(() => { this.activeSlide = (this.activeSlide + 1) % this.slidesCount }, 9000) } }" 
+         x-init="autoplay()" 
+         class="relative h-screen flex items-center justify-center overflow-hidden">
+    
+    <!-- Background Image Slider Wrapper -->
     <div class="absolute inset-0 z-0">
-        <img src="<?= $base_path ?>/assets/images/store.webp" alt="Luxury Interior" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-black/25 via-black/55 to-black/85 opacity-75"></div>
+        <!-- Slide 1: Showroom -->
+        <div class="absolute inset-0 transition-all duration-[2000ms] ease-in-out transform"
+             :class="activeSlide === 0 ? 'opacity-100 scale-100' : 'opacity-0 scale-105'">
+            <img src="<?= $base_path ?>/assets/images/store.webp" alt="Luxury Storefront Showroom" class="w-full h-full object-cover">
+        </div>
+        
+        <!-- Slide 2: Pantries -->
+        <div class="absolute inset-0 transition-all duration-[2000ms] ease-in-out transform"
+             :class="activeSlide === 1 ? 'opacity-100 scale-100' : 'opacity-0 scale-105'"
+             x-cloak>
+            <img src="<?= $base_path ?>/assets/images/pantries.webp" alt="Premium Kitchen Pantries" class="w-full h-full object-cover">
+        </div>
+        
+        <!-- Slide 3: Vision -->
+        <div class="absolute inset-0 transition-all duration-[2000ms] ease-in-out transform"
+             :class="activeSlide === 2 ? 'opacity-100 scale-100' : 'opacity-0 scale-105'"
+             x-cloak>
+            <img src="<?= $base_path ?>/assets/images/our-vision.webp" alt="Exquisite Natural Stones" class="w-full h-full object-cover">
+        </div>
+
+        <!-- Premium balanced dark radial-to-linear hybrid dark overlay to enhance text legibility while showing the storefront -->
+        <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/35 to-black/75 z-[3]"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-black/10 via-black/45 to-black/85 opacity-85 z-[4]"></div>
     </div>
     
-    <div class="container-custom relative z-10 text-center px-4 space-y-6">
-        <span class="inline-block px-4 py-1.5 bg-white/10 backdrop-blur-md text-brand-accent-light font-display font-semibold tracking-[0.25em] uppercase text-xs sm:text-sm rounded-full mb-2 border border-brand-accent-light/20 animate-fade-in">
+    <div class="container-custom relative z-10 text-center px-4 py-8 flex flex-col items-center justify-center min-h-[460px] sm:min-h-[420px] md:min-h-[400px]">
+        <!-- Static Top Pill Badge -->
+        <span class="inline-block px-4 py-1.5 bg-black/40 backdrop-blur-md text-brand-accent-light font-display font-semibold tracking-[0.25em] uppercase text-xs sm:text-sm rounded-full mb-6 border border-brand-accent-light/30 animate-fade-in drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]">
             Sri Lanka's No. 1 Natural Stone Supplier
         </span>
-        <h1 class="text-3xl sm:text-5xl md:text-7xl font-display font-bold text-white mb-6 uppercase tracking-wider leading-none">
-            Elegance in Every <span class="text-brand-accent-light">Stone</span>
-        </h1>
-        <p class="text-base md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed tracking-wide">
-            Premium natural stones, marble, and granite sourced from the finest quarries worldwide for Sri Lanka's most luxurious architectural masterpieces.
-        </p>
-        <div class="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-            <a href="<?= $base_path ?>/pages/products" class="btn-primary">Explore Collection</a>
-            <a href="<?= $base_path ?>/pages/contact" class="btn-outline border-white text-white hover:bg-white hover:text-brand-dark">Contact Us</a>
+
+        <!-- Dynamic Title & Subject Stack -->
+        <div class="relative w-full flex items-center justify-center min-h-[220px] sm:min-h-[180px] md:min-h-[160px]">
+            <!-- Slide 1 Text: Welcome -->
+            <div class="w-full transition-all duration-1000 ease-out transform space-y-6"
+                 :class="activeSlide === 0 ? 'opacity-100 translate-y-0 relative' : 'opacity-0 translate-y-8 absolute pointer-events-none'">
+                <h1 class="text-3xl sm:text-5xl md:text-7xl font-display font-bold text-white uppercase tracking-wider leading-none drop-shadow-[0_4px_12px_rgba(0,0,0,0.7)]">
+                    Welcome to <span class="text-brand-accent-light">Universal</span> Marble & Granite
+                </h1>
+                <p class="text-base md:text-xl text-gray-100 max-w-2xl mx-auto font-normal leading-relaxed tracking-wide drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]">
+                    Premium natural stones, marble, and granite sourced from the finest quarries worldwide for Sri Lanka's most luxurious architectural masterpieces.
+                </p>
+            </div>
+
+            <!-- Slide 2 Text: Largest Selection -->
+            <div class="w-full transition-all duration-1000 ease-out transform space-y-6"
+                 :class="activeSlide === 1 ? 'opacity-100 translate-y-0 relative' : 'opacity-0 translate-y-8 absolute pointer-events-none'"
+                 x-cloak>
+                <h1 class="text-3xl sm:text-5xl md:text-7xl font-display font-bold text-white uppercase tracking-wider leading-none drop-shadow-[0_4px_12px_rgba(0,0,0,0.7)]">
+                    Largest Selection of <span class="text-brand-accent-light">Stone</span> Products
+                </h1>
+                <p class="text-base md:text-xl text-gray-100 max-w-2xl mx-auto font-normal leading-relaxed tracking-wide drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]">
+                    Explore over a decade of exquisite handpicked slabs, from rare Italian marbles to pristine Brazilian granites cut to perfection.
+                </p>
+            </div>
+
+            <!-- Slide 3 Text: Showroom Wattala -->
+            <div class="w-full transition-all duration-1000 ease-out transform space-y-6"
+                 :class="activeSlide === 2 ? 'opacity-100 translate-y-0 relative' : 'opacity-0 translate-y-8 absolute pointer-events-none'"
+                 x-cloak>
+                <h1 class="text-3xl sm:text-5xl md:text-7xl font-display font-bold text-white uppercase tracking-wider leading-none drop-shadow-[0_4px_12px_rgba(0,0,0,0.7)]">
+                    Visit Our Showroom in <span class="text-brand-accent-light">Wattala</span>, Sri Lanka
+                </h1>
+                <p class="text-base md:text-xl text-gray-100 max-w-2xl mx-auto font-normal leading-relaxed tracking-wide drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]">
+                    Step into a world of architectural stone possibilities. Meet our natural stone consultants and explore custom granite and marble solutions live.
+                </p>
+            </div>
         </div>
+
+        <!-- Static Bottom Buttons -->
+        <div class="flex flex-col sm:flex-row justify-center gap-4 pt-6 w-full z-10">
+            <a href="<?= $base_path ?>/pages/products" class="btn-primary shadow-lg shadow-black/30 hover:shadow-brand-accent/20">Explore Collection</a>
+            <a href="<?= $base_path ?>/pages/contact" class="btn-outline border-white text-white bg-black/20 backdrop-blur-sm hover:bg-white hover:text-brand-dark transition-all duration-300">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Slider Navigation Arrows -->
+    <div class="absolute inset-x-4 sm:inset-x-8 top-1/2 -translate-y-1/2 z-20 flex justify-between pointer-events-none">
+        <!-- Prev Button -->
+        <button @click="activeSlide = (activeSlide - 1 + slidesCount) % slidesCount" 
+                class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-black/25 backdrop-blur-md border border-white/10 text-white hover:bg-white hover:text-brand-dark transition-all duration-300 pointer-events-auto hover:shadow-lg shadow-black/20 focus:outline-none"
+                aria-label="Previous slide">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+        </button>
+        <!-- Next Button -->
+        <button @click="activeSlide = (activeSlide + 1) % slidesCount" 
+                class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-black/25 backdrop-blur-md border border-white/10 text-white hover:bg-white hover:text-brand-dark transition-all duration-300 pointer-events-auto hover:shadow-lg shadow-black/20 focus:outline-none"
+                aria-label="Next slide">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- Slider Navigation Indicators -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
+        <button @click="activeSlide = 0" 
+                class="h-[3px] transition-all duration-500 rounded-full" 
+                :class="activeSlide === 0 ? 'w-8 bg-brand-accent-light' : 'w-3 bg-white/40 hover:bg-white/70'" 
+                aria-label="Go to slide 1">
+        </button>
+        <button @click="activeSlide = 1" 
+                class="h-[3px] transition-all duration-500 rounded-full" 
+                :class="activeSlide === 1 ? 'w-8 bg-brand-accent-light' : 'w-3 bg-white/40 hover:bg-white/70'" 
+                aria-label="Go to slide 2">
+        </button>
+        <button @click="activeSlide = 2" 
+                class="h-[3px] transition-all duration-500 rounded-full" 
+                :class="activeSlide === 2 ? 'w-8 bg-brand-accent-light' : 'w-3 bg-white/40 hover:bg-white/70'" 
+                aria-label="Go to slide 3">
+        </button>
     </div>
 </section>
 
@@ -46,7 +146,7 @@ include 'includes/header.php';
                     <span class="inline-block px-3 py-1 bg-brand-light text-brand-accent font-display font-semibold tracking-widest uppercase text-[10px] rounded-full">01 / Introduction</span>
                 </div>
                 <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-brand-dark leading-tight tracking-tight">
-                    A Decade of Excellence in Natural Stone
+                    About <span class="text-brand-accent">Us</span>
                 </h2>
                 <div class="space-y-6 text-brand-gray font-sans text-sm sm:text-base leading-relaxed">
                     <p class="font-medium text-brand-dark text-lg sm:text-xl border-l-4 border-brand-accent pl-4">
