@@ -86,7 +86,7 @@ include '../includes/header.php';
                 <div class="absolute -bottom-3 -left-3 lg:-right-3 lg:left-auto w-full h-full border border-brand-accent/30 rounded-sm z-0 group-hover:-translate-x-1 lg:group-hover:translate-x-1 group-hover:translate-y-1 transition-transform duration-500"></div>
                 
                 <div class="relative overflow-hidden border border-gray-100 shadow-2xl rounded-sm z-10 bg-white aspect-[3/2]">
-                    <img src="/universalgranite/assets/images/our-vision.png" alt="Our Vision - Universal Granite" class="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-700">
+                    <img src="/universalgranite/assets/images/our-vision.webp" alt="Our Vision - Universal Granite" class="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-700">
                 </div>
             </div>
 
@@ -143,7 +143,7 @@ include '../includes/header.php';
                 <div class="absolute -bottom-3 -right-3 w-full h-full border border-brand-accent/30 rounded-sm z-0 group-hover:translate-x-1 group-hover:translate-y-1 transition-transform duration-500"></div>
                 
                 <div class="relative overflow-hidden border border-gray-100 shadow-2xl rounded-sm z-10 bg-white aspect-[3/2]">
-                    <img src="/universalgranite/assets/images/our%20mission.png" alt="Our Mission - Universal Granite" class="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-700">
+                    <img src="/universalgranite/assets/images/our%20mission.webp" alt="Our Mission - Universal Granite" class="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-700">
                 </div>
             </div>
 
@@ -474,7 +474,7 @@ include '../includes/header.php';
                 <div class="absolute -bottom-3 -left-3 w-full h-full border border-brand-accent/30 rounded-sm z-0 group-hover:-translate-x-1 group-hover:translate-y-1 transition-transform duration-500"></div>
                 
                 <div class="relative overflow-hidden border border-gray-200/60 shadow-2xl rounded-sm z-10 bg-white aspect-[4/5]">
-                    <img src="/universalgranite/assets/images/our-strengths.png" alt="Our Strengths - Universal Granite" class="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-700">
+                    <img src="/universalgranite/assets/images/our-strengths.webp" alt="Our Strengths - Universal Granite" class="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-700">
                 </div>
             </div>
 

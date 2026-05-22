@@ -96,7 +96,7 @@ include 'includes/header.php';
                 <!-- Sliding accent top border -->
                 <div class="absolute top-0 left-0 w-full h-[4px] bg-brand-accent transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 z-20"></div>
                 <div class="overflow-hidden aspect-[16/10] w-full relative">
-                    <img src="assets/images/granite-slab-home.png" alt="Granite Slabs" loading="lazy" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700">
+                    <img src="assets/images/granite-slab-home.webp" alt="Granite Slabs" loading="lazy" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700">
                 </div>
                 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-8 z-10">
                     <span class="text-brand-accent-light text-xs font-bold uppercase tracking-[0.2em] mb-2">Natural Stone</span>
@@ -114,7 +114,7 @@ include 'includes/header.php';
                 <!-- Sliding accent top border -->
                 <div class="absolute top-0 left-0 w-full h-[4px] bg-brand-accent transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 z-20"></div>
                 <div class="overflow-hidden aspect-[16/10] w-full relative">
-                    <img src="assets/images/marble-tiles-home.png" alt="Marble Tiles" loading="lazy" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700">
+                    <img src="assets/images/marble-tiles-home.webp" alt="Marble Tiles" loading="lazy" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700">
                 </div>
                 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-8 z-10">
                     <span class="text-brand-accent-light text-xs font-bold uppercase tracking-[0.2em] mb-2">Luxury Stone</span>

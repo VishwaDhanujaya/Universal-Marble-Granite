@@ -25,7 +25,7 @@ include '../includes/header.php';
             [
                 'count' => '01',
                 'title' => 'Flooring',
-                'image' => '/universalgranite/assets/images/flooring.png',
+                'image' => '/universalgranite/assets/images/flooring.webp',
                 'content' => [
                     "The company has undertaken many flooring projects for hotels, private sector corporate premises, as well as government office complexes.",
                     "The high quality granite and marbles from Universal Marble & Granite has adorned many luxury spaces in and around Colombo including luxury residencies. Some of the flooring projects include flat surfaces as well as steps and stairways and slanted disability access areas."
@@ -43,7 +43,7 @@ include '../includes/header.php';
             [
                 'count' => '03',
                 'title' => 'Pantries',
-                'image' => '/universalgranite/assets/images/pantries.png',
+                'image' => '/universalgranite/assets/images/pantries.webp',
                 'content' => [
                     "Granite and marbles is a popular preference for kitchen and pantries for their durability and low maintenance.",
                     "Universal Marble & Granite has installed numerous pantry and kitchen tops for residents which are specially treated to ensure heat and stain resistance for a longer period of time."
@@ -52,7 +52,7 @@ include '../includes/header.php';
             [
                 'count' => '04',
                 'title' => 'Bathware',
-                'image' => '/universalgranite/assets/images/bathware.png',
+                'image' => '/universalgranite/assets/images/bathware.webp',
                 'content' => [
                     "Many of Sri Lankan hotel and resort vanity tops are manufactured and installed by Universal Marble & Granite. The wide variety of colours available in both marble and granite as well as the production capabilities of the processing facility has made the company a sought after supplier of natural stone based vanity tops and bath requirements for large leisure sector projects.",
                     "In addition, the company has also installed vanity tops for government and private sector office complexes as well as luxury residencies."
@@ -61,7 +61,7 @@ include '../includes/header.php';
             [
                 'count' => '05',
                 'title' => 'Decorative',
-                'image' => '/universalgranite/assets/images/decorative.png',
+                'image' => '/universalgranite/assets/images/decorative.webp',
                 'content' => [
                     "Universal Marble & Granite’s skilled craftsmen have manufactured and installed many decorative infrastructures such as ponds and waterfalls, statues and monuments in several military bases, hotels and government sector premises.",
                     "The company is capable of manufacturing and customizing any type of center pieces, monuments and any other types of decorative products of the client choice."
