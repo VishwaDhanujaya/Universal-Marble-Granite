@@ -94,18 +94,54 @@ include '../includes/header.php';
     <!-- Sophisticated golden accent overlay matching the About Us CTA layout -->
     <div class="absolute inset-0 bg-gradient-to-tr from-brand-dark via-neutral-900 to-black opacity-90 z-0"></div>
     
-    <div class="relative z-10 max-w-3xl mx-auto space-y-8 animate-fade-in">
-        <span class="text-brand-accent-light font-display font-semibold tracking-widest uppercase text-xs sm:text-sm">Get in Touch</span>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white uppercase tracking-wider">
-            Ready to Transform Your Space?
-        </h2>
-        <p class="text-gray-400 font-sans max-w-xl mx-auto text-sm sm:text-base leading-relaxed opacity-90">
-            Get in touch with our natural stone experts today to discuss your architectural requirements and receive tailored stone solutions.
-        </p>
-        <div class="pt-4">
-            <a href="<?= $base_path ?>/pages/contact" class="btn-primary">
-                Contact Our Experts
+    <div class="relative z-10 max-w-5xl mx-auto space-y-10 animate-fade-in">
+        <div class="text-center space-y-4">
+            <span class="text-brand-accent-light font-display font-semibold tracking-widest uppercase text-xs sm:text-sm">Visit Our Showroom</span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white uppercase tracking-wider">
+                Find Us in Nawala
+            </h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+            <!-- Address Card -->
+            <div class="flex flex-col items-center space-y-4 p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-brand-accent/50 transition-all duration-300">
+                <div class="p-3.5 bg-brand-accent/20 rounded-full text-brand-accent-light">
+                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                </div>
+                <h3 class="font-display font-bold text-white tracking-widest uppercase text-xs sm:text-sm">Location</h3>
+                <p class="text-gray-300 font-sans text-sm leading-relaxed text-center">
+                    No. 267/1, Nawala Road,<br>Nawala, Sri Lanka.
+                </p>
+            </div>
+
+            <!-- Phone Card -->
+            <a href="tel:+94112806603" class="group flex flex-col items-center space-y-4 p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-brand-accent/50 hover:bg-white/10 transition-all duration-300">
+                <div class="p-3.5 bg-brand-accent/20 rounded-full text-brand-accent-light group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                    </svg>
+                </div>
+                <h3 class="font-display font-bold text-white tracking-widest uppercase text-xs sm:text-sm">Phone</h3>
+                <p class="text-brand-accent-light font-display font-semibold text-lg group-hover:text-white transition-colors duration-300">
+                    0112 806 603
+                </p>
             </a>
+
+            <!-- Hours Card -->
+            <div class="flex flex-col items-center space-y-4 p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-brand-accent/50 transition-all duration-300">
+                <div class="p-3.5 bg-brand-accent/20 rounded-full text-brand-accent-light">
+                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                </div>
+                <h3 class="font-display font-bold text-white tracking-widest uppercase text-xs sm:text-sm">Opening Hours</h3>
+                <p class="text-gray-300 font-sans text-sm leading-relaxed text-center">
+                    – open Monday to Saturday –<br>from 9am to 6pm
+                </p>
+            </div>
         </div>
     </div>
 </section>
