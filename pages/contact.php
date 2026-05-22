@@ -49,15 +49,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->addAddress(SMTP_RECEIVER);
         $mail->addReplyTo($email, $name);
         
-        // Resolve Logo URL dynamically to avoid SMTP email timeouts / encoding bloat
-        $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || (isset($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == 443)) ? "https://" : "http://";
-        $domainName = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : '';
-        if (!empty($domainName) && $domainName !== 'localhost' && $domainName !== '127.0.0.1') {
-            $currentDir = dirname($_SERVER['PHP_SELF']);
-            $baseDir = str_replace('/pages', '', $currentDir);
-            $logoSrc = $protocol . $domainName . $baseDir . '/assets/images/logo.png';
-        } else {
-            $logoSrc = 'https://universalgranite.lk/assets/images/logo.png'; // Fallback to live URL for local development tests
+        // Embed the highly compressed logo inline (44.7 KB) for offline support and native rendering
+        $logoPath = __DIR__ . '/../assets/images/logo.png';
+        $logoSrc = 'https://universalgranite.lk/assets/images/logo.png'; // Fallback
+        if (file_exists($logoPath)) {
+            $mail->addEmbeddedImage($logoPath, 'logo_cid', 'logo.png');
+            $logoSrc = 'cid:logo_cid';
         }
         
         // Content
