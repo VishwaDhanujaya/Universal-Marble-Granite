@@ -94,7 +94,7 @@ include 'includes/header.php';
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <!-- Granite Slabs -->
-            <div class="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer border border-gray-100 bg-white hover:-translate-y-1 transition-all duration-500">
+            <div class="group relative overflow-hidden rounded-2xl shadow-[0_15px_35px_-5px_rgba(0,0,0,0.5)] hover:shadow-[0_30px_60px_-10px_rgba(0,0,0,0.8)] cursor-pointer hover:-translate-y-3 transition-all duration-500 ease-out">
                 <!-- Sliding accent top border -->
                 <div class="absolute top-0 left-0 w-full h-[4px] bg-brand-accent transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 z-20"></div>
                 <div class="overflow-hidden aspect-[16/10] w-full relative">
@@ -112,7 +112,7 @@ include 'includes/header.php';
             </div>
 
             <!-- Marble Tiles -->
-            <div class="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer border border-gray-100 bg-white hover:-translate-y-1 transition-all duration-500">
+            <div class="group relative overflow-hidden rounded-2xl shadow-[0_15px_35px_-5px_rgba(0,0,0,0.5)] hover:shadow-[0_30px_60px_-10px_rgba(0,0,0,0.8)] cursor-pointer hover:-translate-y-3 transition-all duration-500 ease-out">
                 <!-- Sliding accent top border -->
                 <div class="absolute top-0 left-0 w-full h-[4px] bg-brand-accent transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 z-20"></div>
                 <div class="overflow-hidden aspect-[16/10] w-full relative">
